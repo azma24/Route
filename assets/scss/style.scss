@@ -42,3 +42,101 @@ button {
   font-size: inherit;
   padding: 0;
 }
+
+// common
+
+.cta {
+  display: inline-block;
+  background-color: #d79f3d;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 50px;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+// header
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 40px;
+  }
+
+  &__logo {
+    img {
+      width: 220px;
+      height: auto;
+    }
+  }
+
+  &__nav {
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+  }
+
+  &__nav-item {
+    font-size: 20px;
+  }
+
+  &__hamburger {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: 42px;
+    height: 42px;
+
+    &.is-active {
+      .header__hamburger-line {
+        background: #fff;
+
+        // ✖変形
+        // よく見るアニメーションに変更する
+        &:nth-child(1) {
+          transform: translateY(10px) rotate(-45deg);
+        }
+
+        &:nth-child(2) {
+          transform: translateY(0px) rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-10px) rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &__hamburger-line {
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background: #fff;
+    left: 6px;
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease,
+      background-color 0.5s ease;
+
+    &:nth-child(1) {
+      top: 11px;
+    }
+
+    &:nth-child(2) {
+      top: 21px;
+    }
+
+    &:nth-child(3) {
+      top: 31px;
+    }
+  }
+}
