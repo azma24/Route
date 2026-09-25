@@ -56,6 +56,34 @@ button {
   opacity: 0.6;
 }
 
+.section__wrapper {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.section__title-en {
+  color: #888888;
+  margin-bottom: 10px;
+}
+
+.section__title-jp {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.section__title-jp::after {
+  content: "";
+  display: block;
+  width: 740px;
+  height: 1px;
+  margin: 10px auto 0;
+  background-color: #333;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -168,6 +196,7 @@ button {
   background-color: #fff3e2;
   color: #fff;
   padding: 100px 54px;
+  margin-bottom: 100px;
 }
 .message__frame {
   background-color: #d79f3d;
@@ -189,6 +218,71 @@ button {
 .message__text p {
   margin-bottom: 40px;
   line-height: 1.9;
+}
+
+.features__item {
+  margin-bottom: 290px;
+  position: relative;
+}
+.features__item:nth-child(2) .features__img {
+  margin-left: auto;
+}
+.features__item:nth-child(2) .features__card {
+  right: auto;
+  left: 0px;
+}
+.features__img {
+  width: 875px;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 50px;
+  z-index: 5;
+}
+.features__img img {
+  width: 100%;
+  height: auto;
+}
+.features__card {
+  max-width: 780px;
+  padding: 36px 70px 50px 70px;
+  border: solid 1px #838383;
+  background-color: #fff;
+  border-radius: 50px;
+  z-index: 10;
+  position: absolute;
+  bottom: -150px;
+  right: 0px;
+}
+.features__card-number {
+  font-size: 3rem;
+  color: #d79f3d;
+  margin-bottom: 20px;
+}
+.features__card-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.features__card-text {
+  line-height: 2.3;
+}
+.features__card-border {
+  background: linear-gradient(transparent 70%, #d79f3d 70%);
+}
+.features__card-button {
+  padding: 10px 24px;
+  background-color: #fff;
+  color: #333333;
+  border: solid 1px #838383;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  display: block;
+  margin-left: auto;
+}
+.features__card-button:hover {
+  background-color: #d79f3d;
+  color: #fff;
+  border: solid 1px #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

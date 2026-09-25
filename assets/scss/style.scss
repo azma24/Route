@@ -58,6 +58,35 @@ button {
   }
 }
 
+.section__wrapper {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.section__title-en {
+  color: #888888;
+  margin-bottom: 10px;
+}
+
+.section__title-jp {
+  font-size: 2rem;
+  font-weight: 400;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 740px;
+    height: 1px;
+    margin: 10px auto 0;
+    background-color: #333;
+  }
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 // header
 .header {
   &__inner {
@@ -72,9 +101,6 @@ button {
       width: 220px;
       height: auto;
     }
-  }
-
-  &__nav {
   }
 
   &__nav-list {
@@ -209,6 +235,7 @@ button {
   background-color: #fff3e2;
   color: #fff;
   padding: 100px 54px;
+  margin-bottom: 100px;
 
   &__frame {
     background-color: #d79f3d;
@@ -233,6 +260,98 @@ button {
     p {
       margin-bottom: 40px;
       line-height: 1.9;
+    }
+  }
+}
+
+// features
+.features {
+  &__item {
+    margin-bottom: calc(140px + 150px);
+    position: relative;
+
+    &:nth-child(2) {
+      .features__img {
+        margin-left: auto;
+      }
+
+      .features__card {
+        right: auto;
+        left: 0px;
+      }
+    }
+
+    // &--reverse {
+    //   .features__img {
+    //     margin-left: auto;
+    //   }
+
+    //   .features__card {
+    //     right: auto;
+    //     left: 0px;
+    //   }
+    // }
+  }
+
+  &__img {
+    width: 875px;
+    height: 540px;
+    overflow: hidden;
+    border-radius: 50px;
+    z-index: 5;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__card {
+    max-width: 780px;
+    padding: 36px 70px 50px 70px;
+    border: solid 1px #838383;
+    background-color: #fff;
+    border-radius: 50px;
+    z-index: 10;
+    position: absolute;
+    bottom: -150px;
+    right: 0px;
+  }
+
+  &__card-number {
+    font-size: 3rem;
+    color: #d79f3d;
+    margin-bottom: 20px;
+  }
+
+  &__card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  &__card-text {
+    line-height: 2.3;
+  }
+
+  &__card-border {
+    background: linear-gradient(transparent 70%, #d79f3d 70%);
+  }
+
+  &__card-button {
+    padding: 10px 24px;
+    background-color: #fff;
+    color: #333333;
+    border: solid 1px #838383;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    display: block;
+    margin-left: auto;
+
+    &:hover {
+      background-color: #d79f3d;
+      color: #fff;
+      border: solid 1px #fff;
     }
   }
 }
