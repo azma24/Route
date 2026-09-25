@@ -95,6 +95,10 @@ button {
   margin: 0 auto;
 }
 
+.marker {
+  background: linear-gradient(transparent 70%, #d79f3d 70%);
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -277,9 +281,6 @@ button {
 .features__card-text {
   line-height: 2.3;
 }
-.features__card-border {
-  background: linear-gradient(transparent 70%, #d79f3d 70%);
-}
 .features__card-button {
   padding: 10px 24px;
   background-color: #fff;
@@ -363,6 +364,60 @@ button {
 }
 .future__text {
   margin: 0;
+  line-height: 2;
+}
+
+.voice {
+  margin-bottom: 200px;
+}
+.voice__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 85px;
+}
+.voice__item {
+  position: relative;
+  max-width: 540px;
+  padding: 35px 27px;
+  background-color: #fff3e2;
+  border-radius: 50px;
+}
+.voice__item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-color: transparent #fff3e2 #fff3e2 transparent;
+  border-width: 70px;
+  bottom: -40px;
+  border-radius: 0 0 30px 0;
+  transform: scaleX(0.5) rotate(45deg);
+}
+.voice__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 22px;
+}
+.voice__icon {
+  width: 70px;
+  height: auto;
+}
+.voice__icon img {
+  width: 100%;
+  height: 100%;
+}
+.voice__title {
+  font-size: 1.25rem;
+  margin-bottom: 3px;
+}
+.voice__profile {
+  font-size: 0.9rem;
+}
+.voice__text {
   line-height: 2;
 }
 
