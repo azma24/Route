@@ -45,6 +45,18 @@ button {
 
 // common
 .cta {
+  text-align: center;
+  padding: 180px 0;
+  margin-bottom: 130px;
+  background-color: #fff3e2;
+
+  &__message {
+    font-size: 1.5rem;
+    margin-bottom: 70px;
+  }
+}
+
+.cta-button {
   display: inline-block;
   background-color: #d79f3d;
   color: #fff;
@@ -60,7 +72,7 @@ button {
 
 .section__wrapper {
   text-align: center;
-  margin-bottom: 120px;
+  margin-bottom: 70px;
 }
 
 .section__title-en {
@@ -353,5 +365,92 @@ button {
       color: #fff;
       border: solid 1px #fff;
     }
+  }
+}
+
+//future
+.future {
+  margin-bottom: 120px;
+
+  &__inner {
+    position: relative;
+    width: 1140px;
+    height: 950px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .future__item {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 3px solid #d99a27;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // 2本目の円：左にずらす
+    &::before {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 3px solid #d99a27;
+      border-radius: 50%;
+      content: "";
+      transform: translateX(-20px);
+      box-sizing: border-box;
+    }
+
+    // 3本目の円：右にずらす
+    &::after {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 3px solid #d99a27;
+      border-radius: 50%;
+      content: "";
+      transform: translateX(20px);
+      box-sizing: border-box;
+    }
+
+    // 上の円
+    &--top {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    // 左下の円
+    &--left {
+      bottom: 0;
+      left: 0;
+    }
+
+    // 右下の円
+    &--right {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__content {
+    width: 85%;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 2;
   }
 }
