@@ -609,4 +609,48 @@ button {
   display: inline-block;
 }
 
+.footer-message {
+  text-align: center;
+  background-color: #fff3e2;
+}
+.footer-message__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px;
+}
+.footer-message__content {
+  margin-bottom: 80px;
+}
+.footer-message__text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: #a3652f;
+  padding: 65px 100px 0 100px;
+}
+.footer__logo {
+  margin-bottom: 40px;
+}
+.footer__logo img {
+  width: 160px;
+  height: auto;
+}
+.footer__nav-list {
+  max-width: 300px;
+  margin-bottom: 60px;
+}
+.footer__nav-item {
+  margin: 20px 0;
+  color: #fff;
+  font-weight: 300;
+}
+.footer__copy {
+  font-size: 0.7rem;
+  text-align: center;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */

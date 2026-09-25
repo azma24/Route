@@ -736,3 +736,55 @@ button {
     }
   }
 }
+
+.footer-message {
+  text-align: center;
+  background-color: #fff3e2;
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px;
+  }
+
+  &__content {
+    margin-bottom: 80px;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+}
+
+.footer {
+  background-color: #a3652f;
+  padding: 65px 100px 0 100px;
+
+  &__logo {
+    margin-bottom: 40px;
+
+    img {
+      width: 160px;
+      height: auto;
+    }
+  }
+
+  &__nav-list {
+    max-width: 300px;
+    margin-bottom: 60px;
+  }
+
+  &__nav-item {
+    margin: 20px 0;
+    color: #fff;
+    font-weight: 300;
+  }
+
+  &__copy {
+    font-size: 0.7rem;
+    text-align: center;
+    color: #fff;
+  }
+}
