@@ -572,6 +572,10 @@ button {
   margin-top: 10px;
   line-height: 2;
 }
+.flow__form {
+  display: inline-block;
+  color: #d79f3d;
+}
 .flow__connector {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -755,7 +759,6 @@ button {
 .information .section__wrapper {
   background-color: #fff3e2;
   padding: 100px 0;
-  text-align: center;
 }
 .information__title {
   font-weight: 400;
@@ -828,6 +831,250 @@ button {
 .commercial-law__list-item dd {
   margin: 0;
   line-height: 1.8;
+}
+
+.trial .section__wrapper {
+  background-color: #fff3e2;
+  padding: 100px 0;
+}
+.trial__title {
+  font-weight: 400;
+}
+
+.trial-form {
+  margin-bottom: 100px;
+}
+.trial-form__intro {
+  margin-bottom: 100px;
+  text-align: center;
+  line-height: 1.8;
+}
+.trial-form__form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.trial-form__field {
+  margin-bottom: 40px;
+  border: none;
+}
+.trial-form__label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.trial-form__required, .trial-form__optional {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 4px;
+}
+.trial-form__required {
+  color: #fff;
+  background-color: #d79f3d;
+}
+.trial-form__optional {
+  color: #666;
+  background-color: #eee;
+}
+.trial-form__input, .trial-form__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 18px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.trial-form__input:focus, .trial-form__textarea:focus {
+  outline: none;
+  border-color: #d79f3d;
+}
+.trial-form__textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+.trial-form__note {
+  margin-top: 12px;
+  font-size: 13px;
+}
+.trial-form__radio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.trial-form__radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.trial-form__radio input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+.trial-form__flow {
+  margin: 60px 0 40px;
+  padding: 30px;
+  background-color: #fff3e2;
+  text-align: center;
+}
+.trial-form__flow-title {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.trial-form__flow-text {
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+.trial-form__flow-confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.trial-form__flow-confirm input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+.trial-form__privacy {
+  margin: 60px 0 40px;
+  text-align: center;
+}
+.trial-form__privacy-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.trial-form__privacy-label input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0;
+}
+.trial-form__privacy-label a {
+  color: #d79f3d;
+  display: inline-block;
+}
+.trial-form__submit {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 18px 30px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #d79f3d;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.thanks {
+  padding: 60px 20px;
+}
+.thanks__inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  background-color: #fff3e2;
+  text-align: center;
+}
+.thanks__title-en {
+  margin-bottom: 15px;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 20px;
+}
+.thanks__title {
+  margin-bottom: 50px;
+  font-size: 32px;
+  font-weight: 500;
+}
+.thanks__text {
+  margin-bottom: 25px;
+  line-height: 2;
+}
+.thanks__note {
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.thanks__button {
+  display: inline-block;
+  min-width: 240px;
+  padding: 18px 30px;
+  border-radius: 50px;
+  background-color: #d79f3d;
+  color: #fff;
+  text-align: center;
+  transition: opacity 0.3s;
+}
+.thanks__button:hover {
+  opacity: 0.7;
+}
+
+.company {
+  padding: 40px 0;
+}
+.company__title {
+  margin-bottom: 80px;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+.company__list {
+  border-top: 1px solid #d79f3d;
+}
+.company__item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  border-bottom: 1px solid #d79f3d;
+}
+.company__item dt,
+.company__item dd {
+  padding: 25px 30px;
+}
+.company__item dt {
+  font-weight: 500;
+}
+.company__item dd {
+  margin: 0;
+}
+.company__item a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.company__item a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  .company {
+    padding: 80px 0 100px;
+  }
+  .company__title {
+    margin-bottom: 50px;
+    font-size: 2rem;
+  }
+  .company__item {
+    grid-template-columns: 1fr;
+  }
+  .company__item dt,
+  .company__item dd {
+    padding: 18px 20px;
+  }
+  .company__item dt {
+    padding-bottom: 10px;
+  }
+  .company__item dd {
+    padding-top: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
