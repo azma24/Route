@@ -1,0 +1,71 @@
+.company {
+  padding: 40px 0;
+
+  &__title {
+    margin-bottom: 80px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__list {
+    border-top: 1px solid #d79f3d;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    border-bottom: 1px solid #d79f3d;
+
+    dt,
+    dd {
+      padding: 25px 30px;
+    }
+
+    dt {
+      font-weight: 500;
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .company {
+    padding: 80px 0 100px;
+
+    &__title {
+      margin-bottom: 50px;
+      font-size: 2rem;
+    }
+
+    &__item {
+      grid-template-columns: 1fr;
+
+      dt,
+      dd {
+        padding: 18px 20px;
+      }
+
+      dt {
+        padding-bottom: 10px;
+      }
+
+      dd {
+        padding-top: 10px;
+      }
+    }
+  }
+}
