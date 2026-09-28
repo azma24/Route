@@ -1,0 +1,49 @@
+.thanks {
+  padding: 60px 20px;
+
+  &__inner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    background-color: #fff3e2;
+    text-align: center;
+  }
+
+  &__title-en {
+    margin-bottom: 15px;
+    font-family: "Zen Old Mincho", serif;
+    font-size: 20px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    line-height: 2;
+  }
+
+  &__note {
+    margin-bottom: 50px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  &__button {
+    display: inline-block;
+    min-width: 240px;
+    padding: 18px 30px;
+    border-radius: 50px;
+    background-color: #d79f3d;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

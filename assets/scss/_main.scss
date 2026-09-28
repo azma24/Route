@@ -467,6 +467,11 @@
     line-height: 2;
   }
 
+  &__form {
+    display: inline-block;
+    color: #d79f3d;
+  }
+
   &__connector {
     display: grid;
     grid-template-columns: 220px 1fr;

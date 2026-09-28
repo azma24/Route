@@ -1,41 +1,31 @@
-.contact {
-  padding: 120px 0;
-  background-color: #fff3e2;
-
-  &__inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  &__heading {
-    margin-bottom: 70px;
-    text-align: center;
-  }
-
-  &__heading-en {
-    margin-bottom: 15px;
-    font-size: 14px;
-    letter-spacing: 0.15em;
+.trial {
+  .section__wrapper {
+    background-color: #fff3e2;
+    padding: 100px 0;
   }
 
   &__title {
-    margin-bottom: 25px;
-    font-size: 36px;
     font-weight: 400;
   }
+}
 
-  &__text {
+.trial-form {
+  margin-bottom: 100px;
+
+  &__intro {
+    margin-bottom: 100px;
+    text-align: center;
     line-height: 1.8;
   }
 
   &__form {
-    padding: 60px 70px;
-    background-color: #fff;
-    border-radius: 30px;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   &__field {
     margin-bottom: 40px;
+    border: none;
   }
 
   &__label {
@@ -72,7 +62,7 @@
     font-family: inherit;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 5px;
     background-color: #fff;
 
     &:focus {
@@ -86,16 +76,9 @@
     resize: vertical;
   }
 
-  &__date-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  &__date-label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
+  &__note {
+    margin-top: 12px;
+    font-size: 13px;
   }
 
   &__radio-list {
@@ -117,8 +100,38 @@
     }
   }
 
+  &__flow {
+    margin: 60px 0 40px;
+    padding: 30px;
+    background-color: #fff3e2;
+    text-align: center;
+  }
+
+  &__flow-title {
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  &__flow-text {
+    margin-bottom: 25px;
+    line-height: 1.8;
+  }
+
+  &__flow-confirm {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+    }
+  }
+
   &__privacy {
-    margin: 50px 0 35px;
+    margin: 60px 0 40px;
     text-align: center;
   }
 
@@ -132,18 +145,19 @@
       width: 18px;
       height: 18px;
       margin: 0;
+      flex-shrink: 0;
     }
 
     a {
-      color: inherit;
-      text-decoration: underline;
+      color: #d79f3d;
+      display: inline-block;
     }
   }
 
   &__submit {
     display: block;
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 18px 30px;
     color: #fff;
