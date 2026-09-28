@@ -1,0 +1,156 @@
+.contact {
+  padding: 120px 0;
+  background-color: #fff3e2;
+
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  &__heading-en {
+    margin-bottom: 15px;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  &__text {
+    line-height: 1.8;
+  }
+
+  &__form {
+    padding: 60px 70px;
+    background-color: #fff;
+    border-radius: 30px;
+  }
+
+  &__field {
+    margin-bottom: 40px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  &__required,
+  &__optional {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 4px;
+  }
+
+  &__required {
+    color: #fff;
+    background-color: #d79f3d;
+  }
+
+  &__optional {
+    color: #666;
+    background-color: #eee;
+  }
+
+  &__input,
+  &__textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 18px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+
+    &:focus {
+      outline: none;
+      border-color: #d79f3d;
+    }
+  }
+
+  &__textarea {
+    min-height: 160px;
+    resize: vertical;
+  }
+
+  &__date-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__date-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  &__radio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+    }
+  }
+
+  &__privacy {
+    margin: 50px 0 35px;
+    text-align: center;
+  }
+
+  &__privacy-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #d79f3d;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+}

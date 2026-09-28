@@ -1,0 +1,30 @@
+.footer {
+  background-color: #a3652f;
+  padding: 65px 100px 0 100px;
+
+  &__logo {
+    margin-bottom: 40px;
+
+    img {
+      width: 160px;
+      height: auto;
+    }
+  }
+
+  &__nav-list {
+    max-width: 300px;
+    margin-bottom: 60px;
+  }
+
+  &__nav-item {
+    margin: 20px 0;
+    color: #fff;
+    font-weight: 300;
+  }
+
+  &__copy {
+    font-size: 0.7rem;
+    text-align: center;
+    color: #fff;
+  }
+}
