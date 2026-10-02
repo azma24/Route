@@ -39,3 +39,27 @@ faqQuestions.forEach((question) => {
     }
   });
 });
+
+// ----------------------------------------
+// 要素をふわっと表示
+// ----------------------------------------
+
+const targets = document.querySelectorAll(".scroll-js");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-active");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  },
+);
+
+targets.forEach((target) => {
+  observer.observe(target);
+});

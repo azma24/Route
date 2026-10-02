@@ -30,3 +30,72 @@
 .marker {
   background: linear-gradient(transparent 70%, #d79f3d 70%);
 }
+
+.scroll-js {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+
+  // 下からふわっと表示
+  &--fade-up {
+    transform: translateY(80px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  // 1つずつ下からふわっと表示
+  // .scroll-jsの中に.scroll-js__itemがある場合は、通常のscroll-jsとは違う「複数要素を順番に表示するアニメーション」にする
+  // &:hasは条件分岐に近い
+  &:has(.scroll-js__item) {
+    opacity: 1;
+
+    .scroll-js__item {
+      opacity: 0;
+      transform: translateY(80px);
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+  }
+
+  &.is-active {
+    opacity: 1;
+
+    &.scroll-js--fade-up {
+      transform: translateY(0);
+    }
+
+    .scroll-js__item {
+      opacity: 1;
+      transform: translateY(0);
+
+      &:nth-child(1) {
+        transition-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        transition-delay: 0.15s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+
+      &:nth-child(4) {
+        transition-delay: 0.45s;
+      }
+
+      &:nth-child(5) {
+        transition-delay: 0.6s;
+      }
+
+      &:nth-child(6) {
+        transition-delay: 0.75s;
+      }
+
+      &:nth-child(7) {
+        transition-delay: 0.9s;
+      }
+    }
+  }
+}

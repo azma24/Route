@@ -75,6 +75,54 @@ button {
   background: linear-gradient(transparent 70%, #d79f3d 70%);
 }
 
+.scroll-js {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.scroll-js--fade-up {
+  transform: translateY(80px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.scroll-js:has(.scroll-js__item) {
+  opacity: 1;
+}
+.scroll-js:has(.scroll-js__item) .scroll-js__item {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.scroll-js.is-active {
+  opacity: 1;
+}
+.scroll-js.is-active.scroll-js--fade-up {
+  transform: translateY(0);
+}
+.scroll-js.is-active .scroll-js__item {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-js.is-active .scroll-js__item:nth-child(1) {
+  transition-delay: 0s;
+}
+.scroll-js.is-active .scroll-js__item:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.scroll-js.is-active .scroll-js__item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.scroll-js.is-active .scroll-js__item:nth-child(4) {
+  transition-delay: 0.45s;
+}
+.scroll-js.is-active .scroll-js__item:nth-child(5) {
+  transition-delay: 0.6s;
+}
+.scroll-js.is-active .scroll-js__item:nth-child(6) {
+  transition-delay: 0.75s;
+}
+.scroll-js.is-active .scroll-js__item:nth-child(7) {
+  transition-delay: 0.9s;
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
