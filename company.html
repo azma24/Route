@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Route</title>
+    <title>会社概要 | Route</title>
 
     <meta name="description" content="" />
 
@@ -37,7 +37,7 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <a class="header__logo" href="#">
+        <a class="header__logo" href="./index.html">
           <img src="/assets/img/logo-black.png" alt="Routeのロゴ" />
         </a>
 
@@ -50,16 +50,18 @@
               </a>
             </li> -->
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#feature">特徴</a>
+              <a class="header__nav-link" href="./index.html#feature">特徴</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#price">料金・コース</a>
+              <a class="header__nav-link" href="./index.html#course"
+                >料金・コース</a
+              >
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#faq">FAQ</a>
+              <a class="header__nav-link" href="./index.html#faq">FAQ</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-cta" href="session-form.html">
+              <a class="header__nav-cta" href="./session-form.html">
                 無料体験セッション
               </a>
             </li>
@@ -80,9 +82,12 @@
     </header>
 
     <main class="company">
-      <div class="inner">
-        <h1 class="company__title">会社概要</h1>
+      <div class="section__wrapper">
+        <p class="section__title-en">Company Profile</p>
+        <h1 class="information__title">会社概要</h1>
+      </div>
 
+      <div class="inner">
         <dl class="company__list">
           <div class="company__item">
             <dt>会社名</dt>
@@ -128,13 +133,15 @@
       </a>
       <nav class="footer__nav">
         <ul class="footer__nav-list">
-          <li class="footer__nav-item"><a href="#">会社概要</a></li>
-          <li class="footer__nav-item"><a href="#">採用情報</a></li>
           <li class="footer__nav-item">
-            <a href="information.html#privacy">プライバシーポリシー</a>
+            <a href="./company.html">会社概要</a>
+          </li>
+          <!-- <li class="footer__nav-item"><a href="#">採用情報</a></li> -->
+          <li class="footer__nav-item">
+            <a href="./information.html#privacy">プライバシーポリシー</a>
           </li>
           <li class="footer__nav-item">
-            <a href="information.html#commercial-law"
+            <a href="./information.html#commercial-law"
               >特定商取引法に基づく表記</a
             >
           </li>
