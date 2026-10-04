@@ -1,15 +1,18 @@
 .company {
-  padding: 40px 0;
+  margin-top: 120px;
+
+  .section__wrapper {
+    background-color: #fff3e2;
+    padding: 100px 0;
+  }
 
   &__title {
-    margin-bottom: 80px;
-    font-size: 2.5rem;
     font-weight: 400;
-    text-align: center;
   }
 
   &__list {
     border-top: 1px solid #d79f3d;
+    margin-bottom: 40px;
   }
 
   &__item {

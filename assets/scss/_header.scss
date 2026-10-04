@@ -1,15 +1,25 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 38px 40px;
+    transition: padding 0.3s ease;
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
   }
 
   &__logo {
     img {
       width: 220px;
       height: auto;
+      transition: width 0.3s ease;
     }
   }
 
@@ -18,10 +28,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 70px;
+    transition: gap 0.3s ease;
   }
 
   &__nav-item {
     font-size: 20px;
+    transition: font-size 0.3s ease;
   }
 
   &__nav-cta {
@@ -30,62 +42,129 @@
     color: #fff;
     padding: 10px 24px;
     border-radius: 50px;
-    transition: opacity 0.2s ease;
+    transition:
+      opacity 0.2s ease,
+      padding 0.3s ease,
+      font-size 0.3s ease;
 
     &:hover {
       opacity: 0.6;
     }
   }
 
-  &__hamburger {
-    position: fixed;
-    top: 20px;
-    right: 25px;
-    width: 42px;
-    height: 42px;
+  &.is-scroll {
+    .header__inner {
+      padding: 15px 40px;
+    }
 
-    &.is-active {
-      .header__hamburger-line {
-        background: #fff;
-
-        // ✖変形
-        // よく見るアニメーションに変更する
-        &:nth-child(1) {
-          transform: translateY(10px) rotate(-45deg);
-        }
-
-        &:nth-child(2) {
-          transform: translateY(0px) rotate(45deg);
-        }
-
-        &:nth-child(3) {
-          transform: translateY(-10px) rotate(45deg);
-        }
+    .header__logo {
+      img {
+        width: 180px;
       }
     }
-  }
 
-  &__hamburger-line {
-    position: absolute;
-    width: 30px;
-    height: 1px;
-    background: #fff;
-    left: 6px;
-    transition:
-      transform 0.5s ease,
-      opacity 0.5s ease,
-      background-color 0.5s ease;
-
-    &:nth-child(1) {
-      top: 11px;
+    .header__nav-list {
+      gap: 40px;
     }
 
-    &:nth-child(2) {
-      top: 21px;
+    .header__nav-item {
+      font-size: 18px;
     }
 
-    &:nth-child(3) {
-      top: 31px;
+    .header__nav-cta {
+      padding: 8px 20px;
+      font-size: 18px;
     }
   }
 }
+
+// .header {
+//   &__inner {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 38px 40px;
+//   }
+
+//   &__logo {
+//     img {
+//       width: 220px;
+//       height: auto;
+//     }
+//   }
+
+//   &__nav-list {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     gap: 70px;
+//   }
+
+//   &__nav-item {
+//     font-size: 20px;
+//   }
+
+//   &__nav-cta {
+//     display: inline-block;
+//     background-color: #d79f3d;
+//     color: #fff;
+//     padding: 10px 24px;
+//     border-radius: 50px;
+//     transition: opacity 0.2s ease;
+
+//     &:hover {
+//       opacity: 0.6;
+//     }
+//   }
+
+// &__hamburger {
+//   position: fixed;
+//   top: 20px;
+//   right: 25px;
+//   width: 42px;
+//   height: 42px;
+
+//   &.is-active {
+//     .header__hamburger-line {
+//       background: #fff;
+
+//       // ✖変形
+//       // よく見るアニメーションに変更する
+//       &:nth-child(1) {
+//         transform: translateY(10px) rotate(-45deg);
+//       }
+
+//       &:nth-child(2) {
+//         transform: translateY(0px) rotate(45deg);
+//       }
+
+//       &:nth-child(3) {
+//         transform: translateY(-10px) rotate(45deg);
+//       }
+//     }
+//   }
+// }
+
+// &__hamburger-line {
+//   position: absolute;
+//   width: 30px;
+//   height: 1px;
+//   background: #fff;
+//   left: 6px;
+//   transition:
+//     transform 0.5s ease,
+//     opacity 0.5s ease,
+//     background-color 0.5s ease;
+
+//   &:nth-child(1) {
+//     top: 11px;
+//   }
+
+//   &:nth-child(2) {
+//     top: 21px;
+//   }
+
+//   &:nth-child(3) {
+//     top: 31px;
+//   }
+// }
