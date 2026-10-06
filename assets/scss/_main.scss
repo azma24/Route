@@ -11,15 +11,15 @@
 
   &__text {
     position: absolute;
-    left: 90px;
-    top: 230px;
+    left: 7vw;
+    top: 15vw;
   }
 
   &__text-title {
-    font-size: 3rem;
+    position: relative;
+    font-size: clamp(2rem, 3.5vw + 0.5rem, 3rem);
     font-weight: 400;
     margin-bottom: 45px;
-    position: relative;
 
     &::before {
       content: "“";
@@ -43,19 +43,21 @@
   }
 
   &__text-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 58px;
+    font-size: clamp(0.8rem, 1vw + 0.5rem, 1.25rem);
+    margin-bottom: 3.6vw;
   }
 }
 
 .message {
   background-color: #fff3e2;
   color: #fff;
-  padding: 100px 120px;
+  padding: 100px 50px;
 
   &__frame {
     background-color: #d79f3d;
     border-radius: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 110px 150px 70px 150px;
   }
 
@@ -95,29 +97,21 @@
         left: 0px;
       }
     }
-
-    // &--reverse {
-    //   .features__img {
-    //     margin-left: auto;
-    //   }
-
-    //   .features__card {
-    //     right: auto;
-    //     left: 0px;
-    //   }
-    // }
   }
 
   &__img {
-    width: 875px;
-    height: 540px;
+    width: 80%;
+    max-width: 875px;
+    height: auto;
+    aspect-ratio: 875 / 540;
     overflow: hidden;
     border-radius: 50px;
     z-index: 5;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -172,7 +166,7 @@
     align-items: center;
     position: fixed;
     inset: 0;
-    z-index: 1000;
+    z-index: 500;
 
     opacity: 0;
     visibility: hidden;
@@ -189,7 +183,7 @@
   &__modal-overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &__modal-content {
@@ -275,9 +269,6 @@
 }
 
 .future {
-  margin-top: 130px;
-  margin-bottom: 120px;
-
   &__inner {
     position: relative;
     width: 1140px;
@@ -364,15 +355,22 @@
 .voice {
   margin-bottom: 200px;
 
+  &__inner {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 85px;
+    column-gap: 6vw;
+    row-gap: 80px;
   }
 
   &__item {
     position: relative;
-    max-width: 540px;
+    max-width: 640px;
     padding: 35px 27px;
     background-color: #fff3e2;
     border-radius: 50px;
@@ -410,7 +408,7 @@
     }
   }
   &__title {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
     margin-bottom: 3px;
   }
 
@@ -420,13 +418,12 @@
 
   &__text {
     line-height: 2;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
   }
 }
 
 .flow {
   background-color: #fffbf6;
-  padding-top: 100px;
-  margin-bottom: 140px;
 
   &__inner {
     max-width: 980px;
@@ -531,7 +528,6 @@
 
 .pause {
   text-align: center;
-  margin-bottom: 220px;
 
   &__content {
     max-width: 750px;
@@ -558,6 +554,7 @@
   &__inner {
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   &__list {
@@ -567,7 +564,7 @@
   }
 
   &__img {
-    width: 255px;
+    width: 100%;
     height: auto;
 
     img {
@@ -591,8 +588,9 @@
   margin-bottom: 150px;
 
   &__inner {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   &__title {
@@ -674,7 +672,7 @@
   &__inner {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 120px;
+    padding: 120px 20px;
   }
 
   &__content {
