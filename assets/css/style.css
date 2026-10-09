@@ -150,10 +150,56 @@ button {
   background-color: #fff;
   border-bottom: 1px solid #e7e7e7;
 }
+@media screen and (max-width: 768px) {
+  .header__inner {
+    padding: 15px 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__inner {
+    padding: 15px 20px;
+  }
+}
 .header__logo img {
   width: 220px;
   height: auto;
   transition: width 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .header__logo img {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__logo img {
+    width: 130px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100dvh;
+    background-color: #fff;
+    transition: right 0.3s ease;
+    z-index: 102;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header.is-menu-open .header__nav {
+    right: 0;
+  }
+}
+.header.is-menu-open .header__hamburger-line--top {
+  transform: translateY(11.5px) rotate(45deg);
+}
+.header.is-menu-open .header__hamburger-line--middle {
+  opacity: 0;
+}
+.header.is-menu-open .header__hamburger-line--bottom {
+  transform: translateY(-11.5px) rotate(-45deg);
 }
 .header__nav-list {
   display: flex;
@@ -162,9 +208,35 @@ button {
   gap: clamp(10px, 3vw, 70px);
   transition: gap 0.3s ease;
 }
+@media screen and (max-width: 768px) {
+  .header__nav-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 250px 40px 40px;
+  }
+}
 .header__nav-item {
   font-size: clamp(1rem, 2vw, 1.5rem);
   transition: font-size 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .header__nav-item {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__nav-item--cta {
+    border-bottom: none;
+    padding-top: 20px;
+    padding-bottom: 0;
+    text-align: center;
+  }
 }
 .header__nav-cta {
   display: inline-block;
@@ -177,21 +249,86 @@ button {
 .header__nav-cta:hover {
   opacity: 0.6;
 }
-.header.is-scroll .header__inner {
-  padding: 15px 40px;
+@media screen and (max-width: 768px) {
+  .header__nav-cta {
+    width: 80%;
+    padding: 20px 0;
+  }
 }
-.header.is-scroll .header__logo img {
-  width: 180px;
+@media screen and (max-width: 480px) {
+  .header__nav-cta {
+    width: 100%;
+  }
 }
-.header.is-scroll .header__nav-list {
-  gap: 40px;
+@media screen and (min-width: 769px) {
+  .header.is-scroll .header__inner {
+    padding: 15px 40px;
+  }
+  .header.is-scroll .header__logo img {
+    width: 180px;
+  }
+  .header.is-scroll .header__nav-list {
+    gap: 40px;
+  }
+  .header.is-scroll .header__nav-item {
+    font-size: 1.2rem;
+  }
+  .header.is-scroll .header__nav-cta {
+    padding: 8px 20px;
+    font-size: 18px;
+  }
 }
-.header.is-scroll .header__nav-item {
-  font-size: 18px;
+.header__hamburger {
+  display: none;
+  position: relative;
+  z-index: 103;
 }
-.header.is-scroll .header__nav-cta {
-  padding: 8px 20px;
-  font-size: 18px;
+@media screen and (max-width: 768px) {
+  .header__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+.header__hamburger-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.header__hamburger-line--top {
+  transform-origin: center;
+}
+.header__hamburger-line--middle {
+  transform-origin: center;
+}
+.header__hamburger-line--bottom {
+  transform-origin: center;
+}
+.header__menu-logo {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header__menu-logo {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  .header__menu-logo img {
+    display: block;
+    width: 280px;
+    height: auto;
+  }
 }
 
 .footer {
@@ -247,6 +384,16 @@ button {
   position: relative;
   margin-top: 120px;
 }
+@media screen and (max-width: 768px) {
+  .fv {
+    margin-top: 83px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .fv {
+    margin-top: 69px;
+  }
+}
 .fv__img img {
   width: 100%;
   object-fit: cover;
@@ -254,7 +401,7 @@ button {
 .fv__text {
   position: absolute;
   left: 7vw;
-  top: 15vw;
+  top: 12vw;
 }
 .fv__text-title {
   position: relative;

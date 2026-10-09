@@ -13,6 +13,40 @@ window.addEventListener("scroll", () => {
 });
 
 // ----------------------------------------
+// ハンバーガーメニュー
+// ----------------------------------------
+
+const headerElement = document.querySelector(".header");
+const hamburger = document.getElementById("hamburgerBtn");
+
+hamburger.addEventListener("click", () => {
+  const isOpen = headerElement.classList.toggle("is-menu-open");
+  hamburger.setAttribute("aria-expanded", isOpen);
+});
+
+const navLinks = document.querySelectorAll(".header__nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    headerElement.classList.remove("is-menu-open");
+    hamburger.setAttribute("aria-expanded", "false");
+  });
+});
+
+// Escキーでメニューを閉じる
+document.addEventListener("keydown", (event) => {
+  console.log("押したキー:", event.key);
+
+  if (
+    event.key === "Escape" &&
+    headerElement.classList.contains("is-menu-open")
+  ) {
+    headerElement.classList.remove("is-menu-open");
+    hamburger.setAttribute("aria-expanded", "false");
+  }
+});
+
+// ----------------------------------------
 // モーダルウィンドウ
 // ----------------------------------------
 

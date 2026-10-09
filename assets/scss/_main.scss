@@ -1,6 +1,16 @@
+@use "mixin";
+
 .fv {
   position: relative;
   margin-top: 120px;
+
+  @include mixin.tab {
+    margin-top: 83px;
+  }
+
+  @include mixin.sp {
+    margin-top: 69px;
+  }
 
   &__img {
     img {
@@ -12,7 +22,7 @@
   &__text {
     position: absolute;
     left: 7vw;
-    top: 15vw;
+    top: 12vw;
   }
 
   &__text-title {

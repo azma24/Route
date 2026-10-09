@@ -1,3 +1,5 @@
+@use "mixin";
+
 .header {
   position: fixed;
   top: 0;
@@ -13,6 +15,14 @@
     transition: padding 0.3s ease;
     background-color: #fff;
     border-bottom: 1px solid #e7e7e7;
+
+    @include mixin.tab {
+      padding: 15px 40px;
+    }
+
+    @include mixin.sp {
+      padding: 15px 20px;
+    }
   }
 
   &__logo {
@@ -20,6 +30,49 @@
       width: 220px;
       height: auto;
       transition: width 0.3s ease;
+
+      @include mixin.tab {
+        width: 180px;
+      }
+
+      @include mixin.sp {
+        width: 130px;
+      }
+    }
+  }
+
+  &__nav {
+    @include mixin.tab {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100dvh;
+      background-color: #fff;
+      transition: right 0.3s ease;
+      z-index: 102;
+    }
+  }
+
+  &.is-menu-open {
+    .header__nav {
+      @include mixin.tab {
+        right: 0;
+      }
+    }
+
+    .header__hamburger-line {
+      &--top {
+        transform: translateY(11.5px) rotate(45deg);
+      }
+
+      &--middle {
+        opacity: 0;
+      }
+
+      &--bottom {
+        transform: translateY(-11.5px) rotate(-45deg);
+      }
     }
   }
 
@@ -27,16 +80,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // gap: 70px;
     gap: clamp(10px, 3vw, 70px);
-
     transition: gap 0.3s ease;
+
+    @include mixin.tab {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 30px;
+      width: 100%;
+      height: 100%;
+      padding: 250px 40px 40px;
+    }
   }
 
   &__nav-item {
-    // font-size: 20px;
     font-size: clamp(1rem, 2vw, 1.5rem);
     transition: font-size 0.3s ease;
+
+    @include mixin.tab {
+      width: 100%;
+      border-bottom: 1px solid #e7e7e7;
+      padding-bottom: 30px;
+    }
+
+    &--cta {
+      @include mixin.tab {
+        border-bottom: none;
+        padding-top: 20px;
+        padding-bottom: 0;
+        text-align: center;
+      }
+    }
   }
 
   &__nav-cta {
@@ -53,30 +128,98 @@
     &:hover {
       opacity: 0.6;
     }
+
+    @include mixin.tab {
+      width: 80%;
+      padding: 20px 0;
+    }
+
+    @include mixin.sp {
+      width: 100%;
+    }
   }
 
   &.is-scroll {
-    .header__inner {
-      padding: 15px 40px;
-    }
+    @media screen and (min-width: 769px) {
+      .header__inner {
+        padding: 15px 40px;
+      }
 
-    .header__logo {
-      img {
+      .header__logo img {
         width: 180px;
       }
+
+      .header__nav-list {
+        gap: 40px;
+      }
+
+      .header__nav-item {
+        font-size: 1.2rem;
+      }
+
+      .header__nav-cta {
+        padding: 8px 20px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    position: relative;
+    z-index: 103;
+
+    @include mixin.tab {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 24px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &__hamburger-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+
+    &--top {
+      transform-origin: center;
     }
 
-    .header__nav-list {
-      gap: 40px;
+    &--middle {
+      transform-origin: center;
     }
 
-    .header__nav-item {
-      font-size: 18px;
+    &--bottom {
+      transform-origin: center;
     }
+  }
 
-    .header__nav-cta {
-      padding: 8px 20px;
-      font-size: 18px;
+  &__menu-logo {
+    display: none;
+
+    @include mixin.tab {
+      display: block;
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      img {
+        display: block;
+        width: 280px;
+        height: auto;
+      }
     }
   }
 }
