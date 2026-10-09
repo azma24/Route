@@ -45,29 +45,49 @@
           <img src="./assets/img/logo-black.webp" alt="Routeのロゴ" />
         </a>
 
-        <nav class="header__nav">
+        <nav class="header__nav" id="headerNav">
+          <a href="./index.html" class="header__menu-logo">
+            <img src="./assets/img/logo-black.webp" alt="Route" />
+          </a>
+
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-link" href="./index.html#feature"> 特徴 </a>
+              <a class="header__nav-link" href="./index.html#feature">特徴</a>
             </li>
-
             <li class="header__nav-item">
-              <a class="header__nav-link" href="./index.html#course">
-                料金・コース
-              </a>
+              <a class="header__nav-link" href="./index.html#course"
+                >料金・コース</a
+              >
             </li>
-
             <li class="header__nav-item">
-              <a class="header__nav-link" href="./index.html#faq"> FAQ </a>
+              <a class="header__nav-link" href="./index.html#faq">FAQ</a>
             </li>
-
-            <li class="header__nav-item">
+            <li class="header__nav-item header__nav-item--cta">
               <a class="header__nav-cta" href="./session-form.html">
                 無料体験セッション
               </a>
             </li>
           </ul>
         </nav>
+
+        <button
+          class="header__hamburger"
+          id="hamburgerBtn"
+          type="button"
+          aria-label="メニューを開閉"
+          aria-expanded="false"
+          aria-controls="headerNav"
+        >
+          <span
+            class="header__hamburger-line header__hamburger-line--top"
+          ></span>
+          <span
+            class="header__hamburger-line header__hamburger-line--middle"
+          ></span>
+          <span
+            class="header__hamburger-line header__hamburger-line--bottom"
+          ></span>
+        </button>
       </div>
     </header>
 
