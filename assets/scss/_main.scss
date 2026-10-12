@@ -451,6 +451,49 @@
   &__modal-partner-text {
     line-height: 2;
   }
+
+  @include mixin.tab {
+    &__modal-content {
+      padding: 40px 30px;
+    }
+
+    &__modal-text {
+      font-size: 0.8rem;
+    }
+
+    &__modal-partner-name {
+      font-size: 0.8rem;
+    }
+
+    &__modal-partner-title {
+      font-size: 1rem;
+    }
+
+    &__modal-partner-text {
+      font-size: 0.8rem;
+    }
+  }
+
+  @include mixin.sp {
+    &__modal-content {
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    &__modal-partners {
+      flex-direction: column;
+
+      &::before,
+      &::after {
+        top: 52%;
+      }
+    }
+
+    &__modal-partner {
+      padding: 40px 20px;
+      width: 100%;
+    }
+  }
 }
 
 .future {
@@ -605,6 +648,12 @@
     line-height: 2;
     font-size: clamp(0.8rem, 1.5vw, 1rem);
   }
+
+  @include mixin.sp {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .flow {
@@ -667,6 +716,42 @@
     justify-self: center;
     margin: 30px 0;
   }
+
+  @include mixin.sp {
+    &__inner {
+      padding-bottom: 80px;
+    }
+
+    &__item {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+
+    &__header {
+      margin-bottom: 20px;
+    }
+
+    &__connector {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+
+    &__triangle {
+      width: 40px;
+    }
+
+    &__number {
+      font-size: 0.9rem;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+    }
+  }
 }
 
 .course {
@@ -709,6 +794,28 @@
     font-size: 1.5rem;
     font-weight: 600;
   }
+
+  @include mixin.sp {
+    margin-bottom: 50px;
+
+    &__header {
+      font-size: 1.2rem;
+      padding: 30px 0;
+    }
+
+    &__strong-price {
+      font-weight: 400;
+    }
+
+    &__text {
+      font-size: 0.8rem;
+    }
+
+    &__strong-text {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
 }
 
 .pause {
@@ -729,6 +836,15 @@
 
   &__text {
     line-height: 2;
+  }
+
+  @include mixin.sp {
+    &__content {
+      padding: 50px 30px;
+    }
+    &__title {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -765,6 +881,16 @@
 
   &__name {
     font-size: 1.5rem;
+  }
+
+  @include mixin.sp {
+    &__inner {
+      padding: 0 40px;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -834,6 +960,24 @@
     }
   }
 
+  @include mixin.sp {
+    &__question {
+      font-size: 0.9rem;
+
+      &::after {
+        right: 20px;
+      }
+    }
+
+    &__answer {
+      font-size: 0.875rem;
+
+      &.is-open {
+        padding-right: 20px;
+      }
+    }
+  }
+
   &__answer {
     padding: 0 0 0 30px;
     max-height: 0;
@@ -868,5 +1012,14 @@
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 20px;
+  }
+
+  @include mixin.sp {
+    &__inner {
+      padding: 80px 20px;
+    }
+    &__text {
+      font-size: 0.9rem;
+    }
   }
 }

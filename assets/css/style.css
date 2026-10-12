@@ -87,6 +87,11 @@ button {
   margin: 10px auto 0;
   background-color: #333;
 }
+@media screen and (max-width: 480px) {
+  .section__title-jp::after {
+    width: 90%;
+  }
+}
 
 .marker {
   background: linear-gradient(transparent 70%, #d79f3d 70%);
@@ -784,6 +789,39 @@ button {
 .features__modal-partner-text {
   line-height: 2;
 }
+@media screen and (max-width: 980px) {
+  .features__modal-content {
+    padding: 40px 30px;
+  }
+  .features__modal-text {
+    font-size: 0.8rem;
+  }
+  .features__modal-partner-name {
+    font-size: 0.8rem;
+  }
+  .features__modal-partner-title {
+    font-size: 1rem;
+  }
+  .features__modal-partner-text {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .features__modal-content {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .features__modal-partners {
+    flex-direction: column;
+  }
+  .features__modal-partners::before, .features__modal-partners::after {
+    top: 52%;
+  }
+  .features__modal-partner {
+    padding: 40px 20px;
+    width: 100%;
+  }
+}
 
 .future__inner {
   position: relative;
@@ -912,6 +950,11 @@ button {
   line-height: 2;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
+@media screen and (max-width: 480px) {
+  .voice__list {
+    grid-template-columns: 1fr;
+  }
+}
 
 .flow {
   background-color: #fffbf6;
@@ -964,6 +1007,34 @@ button {
   justify-self: center;
   margin: 30px 0;
 }
+@media screen and (max-width: 480px) {
+  .flow__inner {
+    padding-bottom: 80px;
+  }
+  .flow__item {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  .flow__header {
+    margin-bottom: 20px;
+  }
+  .flow__connector {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  .flow__triangle {
+    width: 40px;
+  }
+  .flow__number {
+    font-size: 0.9rem;
+  }
+  .flow__title {
+    font-size: 1.2rem;
+  }
+  .flow__text {
+    font-size: 0.9rem;
+  }
+}
 
 .course {
   text-align: center;
@@ -999,6 +1070,25 @@ button {
   font-size: 1.5rem;
   font-weight: 600;
 }
+@media screen and (max-width: 480px) {
+  .course {
+    margin-bottom: 50px;
+  }
+  .course__header {
+    font-size: 1.2rem;
+    padding: 30px 0;
+  }
+  .course__strong-price {
+    font-weight: 400;
+  }
+  .course__text {
+    font-size: 0.8rem;
+  }
+  .course__strong-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
 
 .pause {
   text-align: center;
@@ -1016,6 +1106,14 @@ button {
 }
 .pause__text {
   line-height: 2;
+}
+@media screen and (max-width: 480px) {
+  .pause__content {
+    padding: 50px 30px;
+  }
+  .pause__title {
+    font-size: 1.2rem;
+  }
 }
 
 .teacher {
@@ -1046,6 +1144,14 @@ button {
 }
 .teacher__name {
   font-size: 1.5rem;
+}
+@media screen and (max-width: 480px) {
+  .teacher__inner {
+    padding: 0 40px;
+  }
+  .teacher__list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .faq {
@@ -1102,6 +1208,20 @@ button {
 .faq__question.is-open::after {
   transform: translateY(-50%) rotate(180deg);
 }
+@media screen and (max-width: 480px) {
+  .faq__question {
+    font-size: 0.9rem;
+  }
+  .faq__question::after {
+    right: 20px;
+  }
+  .faq__answer {
+    font-size: 0.875rem;
+  }
+  .faq__answer.is-open {
+    padding-right: 20px;
+  }
+}
 .faq__answer {
   padding: 0 0 0 30px;
   max-height: 0;
@@ -1129,6 +1249,14 @@ button {
   font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  .footer-message__inner {
+    padding: 80px 20px;
+  }
+  .footer-message__text {
+    font-size: 0.9rem;
+  }
 }
 
 .information {

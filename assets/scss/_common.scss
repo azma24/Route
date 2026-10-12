@@ -40,6 +40,10 @@
     height: 1px;
     margin: 10px auto 0;
     background-color: #333;
+
+    @include mixin.sp {
+      width: 90%;
+    }
   }
 }
 
