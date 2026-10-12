@@ -717,18 +717,16 @@
     margin: 30px 0;
   }
 
-  @include mixin.sp {
+  @include mixin.tab {
     &__inner {
       padding-bottom: 80px;
+      margin: 0 40px;
     }
 
     &__item {
+      margin: 0 auto;
       grid-template-columns: 1fr;
-      padding: 0 20px;
-    }
-
-    &__header {
-      margin-bottom: 20px;
+      padding: 0;
     }
 
     &__connector {
@@ -750,6 +748,12 @@
 
     &__text {
       font-size: 0.9rem;
+    }
+  }
+
+  @include mixin.sp {
+    &__item {
+      padding: 0 20px;
     }
   }
 }
@@ -883,11 +887,21 @@
     font-size: 1.5rem;
   }
 
-  @include mixin.sp {
+  @include mixin.tab {
     &__inner {
       padding: 0 40px;
     }
 
+    &__type {
+      font-size: 0.8rem;
+    }
+
+    &__name {
+      font-size: 1rem;
+    }
+  }
+
+  @include mixin.sp {
     &__list {
       grid-template-columns: 1fr;
     }
@@ -1019,7 +1033,7 @@
       padding: 80px 20px;
     }
     &__text {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
   }
 }

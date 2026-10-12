@@ -1,6 +1,16 @@
+@use "mixin";
+
 .footer {
   background-color: #a3652f;
   padding: 65px 100px 0 100px;
+
+  @include mixin.tab {
+    padding: 65px 50px 0;
+  }
+
+  @include mixin.sp {
+    padding: 65px 30px 0;
+  }
 
   &__logo {
     margin-bottom: 40px;
