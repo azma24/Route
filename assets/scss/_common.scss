@@ -1,3 +1,5 @@
+@use "mixin";
+
 .inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -104,10 +106,16 @@
 
 .sp-only {
   display: none;
+
+  @include mixin.sp {
+    display: block;
+  }
 }
 
-@media (max-width: 1200px) {
-  .sp-only {
+.tab-only {
+  display: none;
+
+  @include mixin.tab {
     display: block;
   }
 }

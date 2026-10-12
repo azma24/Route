@@ -128,12 +128,21 @@ button {
 .sp-only {
   display: none;
 }
-
-@media (max-width: 1200px) {
+@media screen and (max-width: 480px) {
   .sp-only {
     display: block;
   }
 }
+
+.tab-only {
+  display: none;
+}
+@media screen and (max-width: 980px) {
+  .tab-only {
+    display: block;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -150,7 +159,7 @@ button {
   background-color: #fff;
   border-bottom: 1px solid #e7e7e7;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header__inner {
     padding: 15px 40px;
   }
@@ -165,7 +174,7 @@ button {
   height: auto;
   transition: width 0.3s ease;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header__logo img {
     width: 180px;
   }
@@ -175,7 +184,7 @@ button {
     width: 130px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header__nav {
     position: fixed;
     top: 0;
@@ -187,7 +196,7 @@ button {
     z-index: 102;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header.is-menu-open .header__nav {
     right: 0;
   }
@@ -208,7 +217,7 @@ button {
   gap: clamp(10px, 3vw, 70px);
   transition: gap 0.3s ease;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header__nav-list {
     flex-direction: column;
     justify-content: flex-start;
@@ -223,14 +232,14 @@ button {
   font-size: clamp(1rem, 2vw, 1.5rem);
   transition: font-size 0.3s ease;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header__nav-item {
     width: 100%;
     border-bottom: 1px solid #e7e7e7;
     padding-bottom: 30px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header__nav-item--cta {
     border-bottom: none;
     padding-top: 20px;
@@ -249,7 +258,7 @@ button {
 .header__nav-cta:hover {
   opacity: 0.6;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header__nav-cta {
     width: 80%;
     padding: 20px 0;
@@ -283,7 +292,7 @@ button {
   position: relative;
   z-index: 103;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header__hamburger {
     display: flex;
     flex-direction: column;
@@ -315,7 +324,7 @@ button {
 .header__menu-logo {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .header__menu-logo {
     display: block;
     position: absolute;
@@ -427,7 +436,7 @@ button {
   font-size: clamp(0.8rem, 1vw + 0.5rem, 1.25rem);
   margin-bottom: 3.6vw;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .fv {
     margin-top: 83px;
     height: 20vw;
@@ -519,6 +528,37 @@ button {
 .message__text p {
   margin-bottom: 40px;
   line-height: 1.9;
+}
+@media screen and (max-width: 980px) {
+  .message {
+    padding: 100px 30px;
+  }
+  .message__frame {
+    padding: 70px 20px;
+  }
+  .message__title {
+    font-size: 0.9rem;
+  }
+  .message__copy {
+    font-size: 1.5rem;
+    line-height: 2;
+    margin: 30px 0;
+  }
+  .message__text {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .message__text p {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .message {
+    padding: 50px 20px;
+  }
+  .message__copy {
+    font-size: 1.25rem;
+  }
 }
 
 .features__item {
