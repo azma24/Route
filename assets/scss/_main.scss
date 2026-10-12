@@ -4,14 +4,6 @@
   position: relative;
   margin-top: 120px;
 
-  @include mixin.tab {
-    margin-top: 83px;
-  }
-
-  @include mixin.sp {
-    margin-top: 69px;
-  }
-
   &__img {
     img {
       width: 100%;
@@ -55,6 +47,99 @@
   &__text-subtitle {
     font-size: clamp(0.8rem, 1vw + 0.5rem, 1.25rem);
     margin-bottom: 3.6vw;
+  }
+
+  @include mixin.tab {
+    margin-top: 83px;
+
+    // FVの高さを可変にする
+    height: 20vw;
+    min-height: 560px;
+
+    .fv__img {
+      position: relative;
+      height: 100%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          transparent 35%,
+          rgba(255, 243, 226, 0.25) 70%,
+          rgba(255, 243, 226, 0.65) 100%
+        );
+        pointer-events: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 90% 10%;
+      }
+    }
+
+    .fv__text {
+      // top: 110px;
+
+      // 既存のPC版の位置指定をリセット
+      top: auto;
+      left: 0;
+
+      // 画像の下部に配置
+      bottom: 30px;
+      width: 100%;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    .fv__text-title {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      margin-left: 20px;
+
+      &::before {
+        font-size: 5rem;
+      }
+
+      &::after {
+        right: 350px;
+        bottom: -90px;
+        font-size: 5rem;
+      }
+    }
+  }
+
+  @include mixin.sp {
+    margin-top: 69px;
+
+    height: 20vw;
+    min-height: 560px;
+
+    .fv__img {
+      img {
+        object-position: 80% 10%;
+      }
+
+      &::after {
+        background: linear-gradient(
+          to bottom,
+          transparent 35%,
+          rgba(255, 243, 226, 0.5) 70%,
+          rgba(255, 243, 226, 0.65) 100%
+        );
+      }
+    }
+
+    .fv__text-title {
+      font-size: 1.7rem;
+
+      &::after {
+        right: 40px;
+      }
+    }
   }
 }
 
