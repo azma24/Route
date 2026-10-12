@@ -290,6 +290,61 @@
     }
   }
 
+  @include mixin.tab {
+    &__item {
+      margin-bottom: 340px;
+    }
+
+    &__card {
+      max-width: 650px;
+      padding: 30px 40px 40px;
+      bottom: -250px;
+    }
+  }
+
+  @include mixin.sp {
+    &__item {
+      margin-bottom: 60px;
+    }
+
+    &__img {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 20px;
+    }
+
+    &__card {
+      position: relative;
+      width: 100%;
+      max-width: 780px;
+      box-sizing: border-box;
+      padding: 30px 24px;
+      bottom: auto;
+      right: auto;
+      left: auto;
+      border-radius: 30px;
+    }
+
+    &__card-number {
+      font-size: 1.5rem;
+      margin-bottom: 3px;
+    }
+
+    &__card-title {
+      font-size: 1rem;
+    }
+
+    &__card-text {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      line-height: 2;
+    }
+
+    &__card-button {
+      width: 100%;
+    }
+  }
+
   &__modal {
     display: flex;
     justify-content: center;
