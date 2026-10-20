@@ -1,3 +1,5 @@
+@use "mixin";
+
 .thanks {
   padding: 60px 20px;
   margin-top: 120px;
@@ -5,7 +7,7 @@
   &__inner {
     max-width: 700px;
     margin: 0 auto;
-    padding: 80px 40px;
+    padding: 80px 20px;
     background-color: #fff3e2;
     text-align: center;
   }
@@ -18,8 +20,12 @@
 
   &__title {
     margin-bottom: 50px;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 500;
+
+    @include mixin.sp {
+      font-size: 1.5rem;
+    }
   }
 
   &__text {

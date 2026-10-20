@@ -1,3 +1,5 @@
+@use "mixin";
+
 .information {
   margin-top: 120px;
 
@@ -35,6 +37,22 @@
       border-top: 7px solid #d79f3d;
 
       transition: transform 0.6s ease;
+    }
+  }
+
+  @include mixin.sp {
+    &__nav {
+      flex-direction: column;
+      margin: 0 15px;
+      gap: 20px;
+    }
+
+    &__nav-link {
+      font-size: 0.9rem;
+
+      &::after {
+        right: 0;
+      }
     }
   }
 }
@@ -90,6 +108,21 @@
     dd {
       margin: 0;
       line-height: 1.8;
+    }
+  }
+
+  @include mixin.sp {
+    &__list-item {
+      grid-template-columns: 1fr; /* スマホ: 1列 */
+
+      dt {
+        padding: 25px 20px 5px 0;
+        font-weight: 600;
+      }
+
+      dd {
+        padding: 0px 20px 25px 0;
+      }
     }
   }
 }

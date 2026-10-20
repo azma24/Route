@@ -1348,6 +1348,19 @@ button {
   border-top: 7px solid #d79f3d;
   transition: transform 0.6s ease;
 }
+@media screen and (max-width: 480px) {
+  .information__nav {
+    flex-direction: column;
+    margin: 0 15px;
+    gap: 20px;
+  }
+  .information__nav-link {
+    font-size: 0.9rem;
+  }
+  .information__nav-link::after {
+    right: 0;
+  }
+}
 
 .privacy {
   margin-bottom: 150px;
@@ -1393,6 +1406,18 @@ button {
 .commercial-law__list-item dd {
   margin: 0;
   line-height: 1.8;
+}
+@media screen and (max-width: 480px) {
+  .commercial-law__list-item {
+    grid-template-columns: 1fr; /* スマホ: 1列 */
+  }
+  .commercial-law__list-item dt {
+    padding: 25px 20px 5px 0;
+    font-weight: 600;
+  }
+  .commercial-law__list-item dd {
+    padding: 0px 20px 25px 0;
+  }
 }
 
 .trial {
@@ -1547,7 +1572,7 @@ button {
 .thanks__inner {
   max-width: 700px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 80px 20px;
   background-color: #fff3e2;
   text-align: center;
 }
@@ -1558,8 +1583,13 @@ button {
 }
 .thanks__title {
   margin-bottom: 50px;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 500;
+}
+@media screen and (max-width: 480px) {
+  .thanks__title {
+    font-size: 1.5rem;
+  }
 }
 .thanks__text {
   margin-bottom: 25px;
