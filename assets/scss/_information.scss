@@ -1,10 +1,11 @@
 @use "mixin";
+@use "variables";
 
 .information {
   margin-top: 120px;
 
   .section__wrapper {
-    background-color: #fff3e2;
+    background-color: variables.$color-bg-light;
     padding: 100px 0;
   }
 
@@ -20,7 +21,7 @@
 
   &__nav-link {
     position: relative;
-    color: #d79f3d;
+    color: variables.$color-primary;
     font-weight: 600;
 
     &::after {
@@ -34,7 +35,7 @@
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-top: 7px solid #d79f3d;
+      border-top: 7px solid variables.$color-primary;
 
       transition: transform 0.6s ease;
     }
@@ -70,7 +71,7 @@
 
   &__subheading {
     margin-bottom: 20px;
-    color: #d79f3d;
+    color: variables.$color-primary;
   }
   &__text {
     line-height: 1.8;
@@ -84,17 +85,17 @@
 
 .commercial-law {
   padding-bottom: 140px;
-  background-color: #fffbf6;
+  background-color: variables.$color-bg-lighter;
 
   &__list {
     margin-top: 120px;
-    border-top: 1px solid #d79f3d;
+    border-top: 1px solid variables.$color-primary;
   }
 
   &__list-item {
     display: grid;
     grid-template-columns: 220px 1fr;
-    border-bottom: 1px solid #d79f3d;
+    border-bottom: 1px solid variables.$color-primary;
 
     dt,
     dd {

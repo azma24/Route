@@ -1,0 +1,104 @@
+@use "../mixin";
+@use "../variables";
+
+.flow {
+  background-color: #fffbf6;
+
+  &__inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding-bottom: 230px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    column-gap: 25px;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__number {
+    font-size: 1.5rem;
+    color: variables.$color-primary;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__text {
+    margin-top: 10px;
+    line-height: 2;
+  }
+
+  &__form {
+    display: inline-block;
+    color: variables.$color-primary;
+  }
+
+  &__connector {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    padding: 30px 0;
+  }
+
+  &__triangle {
+    display: block;
+    width: 60px;
+    height: auto;
+    justify-self: center;
+    margin: 30px 0;
+  }
+
+  @include mixin.tab {
+    &__inner {
+      padding-bottom: 80px;
+      margin: 0 40px;
+    }
+
+    &__item {
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+
+    &__connector {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+
+    &__triangle {
+      width: 40px;
+    }
+
+    &__number {
+      font-size: 0.9rem;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+    }
+  }
+
+  @include mixin.sp {
+    &__item {
+      padding: 0 20px;
+    }
+  }
+}

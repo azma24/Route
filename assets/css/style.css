@@ -482,24 +482,24 @@ button {
     height: 20vw;
     min-height: 560px;
   }
-  .fv .fv__img {
+  .fv__img {
     position: relative;
     height: 100%;
   }
-  .fv .fv__img::after {
+  .fv__img::after {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom, transparent 35%, rgba(255, 243, 226, 0.25) 70%, rgba(255, 243, 226, 0.65) 100%);
     pointer-events: none;
   }
-  .fv .fv__img img {
+  .fv__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 90% 10%;
   }
-  .fv .fv__text {
+  .fv__text {
     top: auto;
     left: 0;
     bottom: 30px;
@@ -507,15 +507,15 @@ button {
     padding: 0 24px;
     box-sizing: border-box;
   }
-  .fv .fv__text-title {
+  .fv__text-title {
     font-size: 2rem;
     margin-bottom: 25px;
     margin-left: 20px;
   }
-  .fv .fv__text-title::before {
+  .fv__text-title::before {
     font-size: 5rem;
   }
-  .fv .fv__text-title::after {
+  .fv__text-title::after {
     right: 350px;
     bottom: -90px;
     font-size: 5rem;
@@ -527,16 +527,16 @@ button {
     height: 20vw;
     min-height: 560px;
   }
-  .fv .fv__img img {
+  .fv__img img {
     object-position: 80% 10%;
   }
-  .fv .fv__img::after {
+  .fv__img::after {
     background: linear-gradient(to bottom, transparent 35%, rgba(255, 243, 226, 0.5) 70%, rgba(255, 243, 226, 0.65) 100%);
   }
-  .fv .fv__text-title {
+  .fv__text-title {
     font-size: 1.7rem;
   }
-  .fv .fv__text-title::after {
+  .fv__text-title::after {
     right: 40px;
   }
 }
@@ -605,13 +605,6 @@ button {
   margin-bottom: 290px;
   position: relative;
 }
-.features__item:nth-child(2) .features__img {
-  margin-left: auto;
-}
-.features__item:nth-child(2) .features__card {
-  right: auto;
-  left: 0px;
-}
 .features__img {
   width: 80%;
   max-width: 875px;
@@ -637,6 +630,13 @@ button {
   bottom: -150px;
   right: 0px;
 }
+.features__item:nth-child(2) .features__img {
+  margin-left: auto;
+}
+.features__item:nth-child(2) .features__card {
+  right: auto;
+  left: 0;
+}
 .features__card-number {
   font-size: 3rem;
   color: #d79f3d;
@@ -653,7 +653,7 @@ button {
 .features__card-button {
   padding: 10px 24px;
   background-color: #fff;
-  color: #333333;
+  color: #333;
   border: solid 1px #838383;
   border-radius: 50px;
   transition: all 0.2s ease;
@@ -748,7 +748,7 @@ button {
   background: none;
   cursor: pointer;
   font-size: 1.75rem;
-  color: #333333;
+  color: #333;
 }
 .features__modal-title {
   text-align: center;
@@ -1258,11 +1258,21 @@ button {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 14px solid #d99a2b;
+  border-top: 14px solid #d79f3d;
   transition: transform 0.6s ease;
 }
 .faq__question.is-open::after {
   transform: translateY(-50%) rotate(180deg);
+}
+.faq__answer {
+  padding: 0 0 0 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding-bottom 0.5s ease;
+}
+.faq__answer.is-open {
+  max-height: 500px;
+  padding-bottom: 25px;
 }
 @media screen and (max-width: 480px) {
   .faq__question {
@@ -1277,16 +1287,6 @@ button {
   .faq__answer.is-open {
     padding-right: 20px;
   }
-}
-.faq__answer {
-  padding: 0 0 0 30px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding-bottom 0.5s ease;
-}
-.faq__answer.is-open {
-  max-height: 500px;
-  padding-bottom: 25px;
 }
 
 .footer-message {
@@ -1651,8 +1651,7 @@ button {
 .company__item a:hover {
   opacity: 0.7;
 }
-
-@media (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .company {
     padding: 80px 0 100px;
   }

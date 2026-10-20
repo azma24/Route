@@ -1,0 +1,284 @@
+@use "../mixin";
+@use "../variables";
+
+.features {
+  &__item {
+    margin-bottom: calc(140px + 150px);
+    position: relative;
+  }
+
+  &__img {
+    width: 80%;
+    max-width: 875px;
+    height: auto;
+    aspect-ratio: 875 / 540;
+    overflow: hidden;
+    border-radius: 50px;
+    z-index: 5;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__card {
+    max-width: 780px;
+    padding: 36px 70px 50px 70px;
+    border: solid 1px variables.$color-gray;
+    background-color: #fff;
+    border-radius: 50px;
+    z-index: 10;
+    position: absolute;
+    bottom: -150px;
+    right: 0px;
+  }
+
+  &__item:nth-child(2) &__img {
+    margin-left: auto;
+  }
+
+  &__item:nth-child(2) &__card {
+    right: auto;
+    left: 0;
+  }
+
+  &__card-number {
+    font-size: 3rem;
+    color: variables.$color-primary;
+    margin-bottom: 20px;
+  }
+
+  &__card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  &__card-text {
+    line-height: 2.3;
+  }
+
+  &__card-button {
+    padding: 10px 24px;
+    background-color: #fff;
+    color: variables.$color-text;
+    border: solid 1px variables.$color-gray;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    display: block;
+    margin-left: auto;
+
+    &:hover {
+      background-color: variables.$color-primary;
+      color: #fff;
+      border: solid 1px #fff;
+    }
+  }
+
+  @include mixin.tab {
+    &__item {
+      margin-bottom: 340px;
+    }
+
+    &__card {
+      max-width: 650px;
+      padding: 30px 40px 40px;
+      bottom: -250px;
+    }
+  }
+
+  @include mixin.sp {
+    &__item {
+      margin-bottom: 60px;
+    }
+
+    &__img {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 20px;
+    }
+
+    &__card {
+      position: relative;
+      width: 100%;
+      max-width: 780px;
+      box-sizing: border-box;
+      padding: 30px 24px;
+      bottom: auto;
+      right: auto;
+      left: auto;
+      border-radius: 30px;
+    }
+
+    &__card-number {
+      font-size: 1.5rem;
+      margin-bottom: 3px;
+    }
+
+    &__card-title {
+      font-size: 1rem;
+    }
+
+    &__card-text {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      line-height: 2;
+    }
+
+    &__card-button {
+      width: 100%;
+    }
+  }
+
+  &__modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__modal-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__modal-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1100px;
+    padding: 60px 50px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+
+  &__modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.75rem;
+    color: variables.$color-text;
+  }
+
+  &__modal-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  &__modal-text {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 50px;
+  }
+
+  &__modal-partners {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 45px;
+      height: 2px;
+      background-color: variables.$color-gray;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__modal-partner {
+    width: 50%;
+    padding: 40px 20px 70px 20px;
+    border: solid 3px variables.$color-primary;
+    border-radius: 50px;
+  }
+
+  &__modal-partner-name {
+    margin-bottom: 20px;
+  }
+
+  &__modal-partner-title {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  &__modal-partner-text {
+    line-height: 2;
+  }
+
+  @include mixin.tab {
+    &__modal-content {
+      padding: 40px 30px;
+    }
+
+    &__modal-text {
+      font-size: 0.8rem;
+    }
+
+    &__modal-partner-name {
+      font-size: 0.8rem;
+    }
+
+    &__modal-partner-title {
+      font-size: 1rem;
+    }
+
+    &__modal-partner-text {
+      font-size: 0.8rem;
+    }
+  }
+
+  @include mixin.sp {
+    &__modal-content {
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    &__modal-partners {
+      flex-direction: column;
+
+      &::before,
+      &::after {
+        top: 52%;
+      }
+    }
+
+    &__modal-partner {
+      padding: 40px 20px;
+      width: 100%;
+    }
+  }
+}

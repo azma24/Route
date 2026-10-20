@@ -1,10 +1,11 @@
 @use "mixin";
+@use "variables";
 
 .company {
   margin-top: 120px;
 
   .section__wrapper {
-    background-color: #fff3e2;
+    background-color: variables.$color-bg-light;
     padding: 100px 0;
   }
 
@@ -13,14 +14,14 @@
   }
 
   &__list {
-    border-top: 1px solid #d79f3d;
+    border-top: 1px solid variables.$color-primary;
     margin-bottom: 40px;
   }
 
   &__item {
     display: grid;
     grid-template-columns: 220px 1fr;
-    border-bottom: 1px solid #d79f3d;
+    border-bottom: 1px solid variables.$color-primary;
 
     dt,
     dd {

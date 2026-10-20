@@ -1,9 +1,22 @@
 @use "reset";
 @use "common";
+@use "variables";
 @use "header";
 @use "footer";
 @use "cta";
-@use "main";
+
+@use "projects/fv";
+@use "projects/message";
+@use "projects/features";
+@use "projects/future";
+@use "projects/voice";
+@use "projects/flow";
+@use "projects/course";
+@use "projects/pause";
+@use "projects/teacher";
+@use "projects/faq";
+@use "projects/footer-message";
+
 @use "information";
 @use "form";
 @use "thanks";

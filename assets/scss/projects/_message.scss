@@ -1,0 +1,71 @@
+@use "../mixin";
+@use "../variables";
+
+.message {
+  background-color: variables.$color-bg-light;
+  color: #fff;
+  padding: 100px 50px;
+
+  &__frame {
+    background-color: variables.$color-primary;
+    border-radius: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 110px 150px 70px 150px;
+  }
+
+  &__title {
+    font-size: 1.15rem;
+    margin-bottom: 36px;
+  }
+
+  &__copy {
+    font-size: 1.75rem;
+    margin: 50px 0;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    p {
+      margin-bottom: 40px;
+      line-height: 1.9;
+    }
+  }
+
+  @include mixin.tab {
+    padding: 100px 30px;
+
+    &__frame {
+      padding: 70px 20px;
+    }
+
+    &__title {
+      font-size: 0.9rem;
+    }
+
+    &__copy {
+      font-size: 1.5rem;
+      line-height: 2;
+      margin: 30px 0;
+    }
+
+    &__text {
+      font-size: 1rem;
+      font-weight: 400;
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @include mixin.sp {
+    padding: 50px 20px;
+
+    &__copy {
+      font-size: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use "../mixin";
+@use "../variables";
+
+.course {
+  text-align: center;
+  margin-bottom: 100px;
+
+  &__details {
+    max-width: 1167px;
+    background-color: variables.$color-bg-light;
+    border-radius: 50px;
+  }
+
+  &__header {
+    background-color: variables.$color-primary;
+    padding: 40px 0;
+    border-radius: 50px 50px 0 0;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  &__content {
+    padding: 35px 0 45px 0;
+  }
+
+  &__price {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    line-height: 2;
+  }
+
+  &__strong-price {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  &__strong-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  @include mixin.sp {
+    margin-bottom: 50px;
+
+    &__header {
+      font-size: 1.2rem;
+      padding: 30px 0;
+    }
+
+    &__strong-price {
+      font-weight: 400;
+    }
+
+    &__text {
+      font-size: 0.8rem;
+    }
+
+    &__strong-text {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
