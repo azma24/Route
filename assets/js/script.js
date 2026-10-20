@@ -104,10 +104,78 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.3,
+    threshold: 0,
+    rootMargin: "0px 0px -15% 0px",
   },
 );
 
 targets.forEach((target) => {
   observer.observe(target);
+});
+
+// ----------------------------------------
+// Swiper
+// ----------------------------------------
+
+// スマホ版のみSwiperを有効にする
+const initMobileSwiper = (slider) => {
+  let swiper = null;
+  const mediaQuery = window.matchMedia("(max-width: 480px)");
+
+  const updateSwiper = () => {
+    if (mediaQuery.matches && !swiper) {
+      swiper = new Swiper(slider, {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 0,
+        loop: true,
+        speed: 600,
+
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    } else if (!mediaQuery.matches && swiper) {
+      swiper.destroy(true, true);
+      swiper = null;
+    }
+  };
+
+  updateSwiper();
+  mediaQuery.addEventListener("change", updateSwiper);
+};
+
+// teacher：スマホ版のみスライダー
+document.querySelectorAll(".js-mobile-swiper").forEach((slider) => {
+  initMobileSwiper(slider);
+});
+
+// future：PC・スマホ共通で連続して流す
+document.querySelectorAll(".js-continuous-swiper").forEach((slider) => {
+  const wrapper = slider.querySelector(".swiper-wrapper");
+  const originals = Array.from(wrapper.children);
+
+  // 元の3枚を2回ぶん複製して合計9枚にする（ループ用）
+  for (let i = 0; i < 2; i++) {
+    originals.forEach((slide) => {
+      const clone = slide.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      wrapper.appendChild(clone);
+    });
+  }
+
+  new Swiper(slider, {
+    slidesPerView: "auto",
+    centeredSlides: true, // アクティブな円を中央に止める
+    spaceBetween: 80,
+    loop: true,
+    speed: 1200, // 移動にかける時間
+    allowTouchMove: true,
+
+    autoplay: {
+      delay: 6000, // 中央で止まっている時間
+      disableOnInteraction: false,
+    },
+  });
 });
