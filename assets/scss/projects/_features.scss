@@ -26,7 +26,7 @@
   &__card {
     max-width: 780px;
     padding: 36px 70px 50px 70px;
-    border: solid 1px variables.$color-gray;
+    border: solid 1px variables.$color-border;
     background-color: #fff;
     border-radius: 50px;
     z-index: 10;
@@ -64,7 +64,7 @@
     padding: 10px 24px;
     background-color: #fff;
     color: variables.$color-text;
-    border: solid 1px variables.$color-gray;
+    border: solid 1px variables.$color-border;
     border-radius: 50px;
     transition: all 0.2s ease;
     display: block;
@@ -206,7 +206,7 @@
       left: 50%;
       width: 45px;
       height: 2px;
-      background-color: variables.$color-gray;
+      background-color: variables.$color-decoration;
     }
 
     &::before {

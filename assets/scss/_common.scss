@@ -18,7 +18,7 @@
 }
 
 .section__title-en {
-  color: #888888;
+  color: variables.$color-text-sub;
   margin-bottom: 10px;
 
   @include mixin.tab {

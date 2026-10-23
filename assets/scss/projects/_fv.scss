@@ -19,6 +19,7 @@
 
   &__text-title {
     position: relative;
+    display: inline-block;
     font-size: clamp(2rem, 3.5vw + 0.5rem, 3rem);
     font-weight: 400;
     margin-bottom: 45px;
@@ -51,10 +52,7 @@
 
   @include mixin.tab {
     margin-top: 83px;
-
-    // FVの高さを可変にする
-    height: 20vw;
-    min-height: 560px;
+    height: 560px;
 
     &__img {
       position: relative;
@@ -103,7 +101,6 @@
       }
 
       &::after {
-        right: 350px;
         bottom: -90px;
         font-size: 5rem;
       }
@@ -112,9 +109,7 @@
 
   @include mixin.sp {
     margin-top: 69px;
-
-    height: 20vw;
-    min-height: 560px;
+    height: 560px;
 
     &__img {
       img {
@@ -133,10 +128,6 @@
 
     &__text-title {
       font-size: 1.7rem;
-
-      &::after {
-        right: 40px;
-      }
     }
   }
 }

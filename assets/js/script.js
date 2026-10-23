@@ -35,8 +35,6 @@ navLinks.forEach((link) => {
 
 // Escキーでメニューを閉じる
 document.addEventListener("keydown", (event) => {
-  console.log("押したキー:", event.key);
-
   if (
     event.key === "Escape" &&
     headerElement.classList.contains("is-menu-open")

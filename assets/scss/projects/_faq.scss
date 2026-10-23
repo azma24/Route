@@ -20,10 +20,10 @@
   }
 
   &__item {
-    border-top: 1px solid variables.$color-faq-border;
+    border-top: 1px solid variables.$color-border-lighter;
 
     &:last-child {
-      border-bottom: 1px solid variables.$color-faq-border;
+      border-bottom: 1px solid variables.$color-border-lighter;
     }
   }
 

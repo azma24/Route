@@ -2,7 +2,7 @@
 @use "../variables";
 
 .flow {
-  background-color: #fffbf6;
+  background-color: variables.$color-bg-lighter;
 
   &__inner {
     max-width: 980px;
@@ -13,9 +13,6 @@
   &__list {
     display: flex;
     flex-direction: column;
-    list-style: none;
-    margin: 0;
-    padding: 0;
   }
 
   &__item {
