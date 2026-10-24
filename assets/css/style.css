@@ -667,7 +667,7 @@ br.tab-only {
     width: max(80%, min(100%, 650px));
   }
   .features__item {
-    margin-bottom: 340px;
+    margin-bottom: 100px;
   }
   .features__card {
     position: relative;
