@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   background-color: #fff;
   color: #333;
@@ -145,20 +145,20 @@ button {
   transition-delay: 0.9s;
 }
 
-.sp-only {
+br.sp-only {
   display: none;
 }
 @media screen and (max-width: 480px) {
-  .sp-only {
+  br.sp-only {
     display: block;
   }
 }
 
-.tab-only {
+br.tab-only {
   display: none;
 }
 @media screen and (max-width: 980px) {
-  .tab-only {
+  br.tab-only {
     display: block;
   }
 }
@@ -212,13 +212,15 @@ button {
     width: 100%;
     height: 100dvh;
     background-color: #fff;
-    transition: right 0.3s ease;
+    visibility: hidden;
+    transition: right 0.3s ease, visibility 0.3s ease;
     z-index: 102;
   }
 }
 @media screen and (max-width: 980px) {
   .header.is-menu-open .header__nav {
     right: 0;
+    visibility: visible;
   }
 }
 .header.is-menu-open .header__hamburger-line--top {
@@ -289,7 +291,7 @@ button {
     width: 100%;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 981px) {
   .header.is-scroll .header__inner {
     padding: 15px 40px;
   }
@@ -661,34 +663,27 @@ button {
   border: solid 1px #fff;
 }
 @media screen and (max-width: 980px) {
+  .features__img {
+    width: max(80%, min(100%, 650px));
+  }
   .features__item {
     margin-bottom: 340px;
   }
   .features__card {
+    position: relative;
+    bottom: auto;
     max-width: 650px;
+    margin: clamp(-150px, -15vw, -70px) 0 0 auto;
     padding: 30px 40px 40px;
-    bottom: -250px;
+  }
+  .features__item:nth-child(2) .features__card {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 480px) {
   .features__item {
     margin-bottom: 60px;
-  }
-  .features__img {
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 20px;
-  }
-  .features__card {
-    position: relative;
-    width: 100%;
-    max-width: 780px;
-    box-sizing: border-box;
-    padding: 30px 24px;
-    bottom: auto;
-    right: auto;
-    left: auto;
-    border-radius: 30px;
   }
   .features__card-number {
     font-size: 1.5rem;
@@ -964,10 +959,6 @@ button {
   width: 70px;
   height: auto;
 }
-.voice__icon img {
-  width: 100%;
-  height: 100%;
-}
 .voice__title {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   margin-bottom: 3px;
@@ -1071,7 +1062,6 @@ button {
   margin-bottom: 100px;
 }
 .course__details {
-  max-width: 1167px;
   background-color: #fff3e2;
   border-radius: 50px;
 }

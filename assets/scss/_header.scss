@@ -50,7 +50,10 @@
       width: 100%;
       height: 100dvh;
       background-color: #fff;
-      transition: right 0.3s ease;
+      visibility: hidden;
+      transition:
+        right 0.3s ease,
+        visibility 0.3s ease;
       z-index: 102;
     }
   }
@@ -59,6 +62,7 @@
     .header__nav {
       @include mixin.tab {
         right: 0;
+        visibility: visible;
       }
     }
 
@@ -141,7 +145,7 @@
   }
 
   &.is-scroll {
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 981px) {
       .header__inner {
         padding: 15px 40px;
       }

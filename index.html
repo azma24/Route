@@ -49,10 +49,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&family=Zen+Old+Mincho&display=swap"
       rel="stylesheet"
     />
@@ -216,7 +212,10 @@
                     できるようになったことも、苦手なことも共有しあい、理解しているからあなたに合った一歩を提案できます。
                   </p>
 
-                  <button class="features__card-button js-open">
+                  <button
+                    class="features__card-button js-open"
+                    aria-haspopup="dialog"
+                  >
                     LEARN MORE
                   </button>
                 </div>
@@ -245,7 +244,12 @@
               </li>
             </ul>
 
-            <div class="features__modal js-modal">
+            <div
+              class="features__modal js-modal"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="partnerModalTitle"
+            >
               <div class="features__modal-overlay js-close"></div>
               <div class="features__modal-content">
                 <button
@@ -255,7 +259,7 @@
                 >
                   ✕
                 </button>
-                <h3 class="features__modal-title">
+                <h3 class="features__modal-title" id="partnerModalTitle">
                   <span class="marker"
                     >成長を理解してくれる<br
                       class="sp-only"

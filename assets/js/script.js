@@ -51,15 +51,31 @@ document.addEventListener("keydown", (event) => {
 const openBtn = document.querySelector(".js-open");
 const content = document.querySelector(".js-modal");
 const closeBtns = document.querySelectorAll(".js-close");
+const modalCloseBtn = document.querySelector(".features__modal-close");
 
-openBtn.addEventListener("click", () => {
+const openModal = () => {
   content.classList.add("is-open");
-});
+  document.body.style.overflow = "hidden"; // 背景のスクロールを止める
+  modalCloseBtn.focus(); // モーダル内にフォーカスを移す
+};
+
+const closeModal = () => {
+  content.classList.remove("is-open");
+  document.body.style.overflow = ""; // スクロールを元に戻す
+  openBtn.focus(); // 開くボタンにフォーカスを戻す
+};
+
+openBtn.addEventListener("click", openModal);
 
 closeBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    content.classList.remove("is-open");
-  });
+  btn.addEventListener("click", closeModal);
+});
+
+// Escキーでモーダルを閉じる
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && content.classList.contains("is-open")) {
+    closeModal();
+  }
 });
 
 // ----------------------------------------

@@ -121,7 +121,7 @@
   }
 }
 
-.sp-only {
+br.sp-only {
   display: none;
 
   @include mixin.sp {
@@ -129,7 +129,7 @@
   }
 }
 
-.tab-only {
+br.tab-only {
   display: none;
 
   @include mixin.tab {

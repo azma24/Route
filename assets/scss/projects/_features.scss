@@ -78,38 +78,31 @@
   }
 
   @include mixin.tab {
+    &__img {
+      width: max(80%, min(100%, 650px));
+    }
+
     &__item {
       margin-bottom: 340px;
     }
 
     &__card {
+      position: relative;
+      bottom: auto;
       max-width: 650px;
+      margin: clamp(-150px, -15vw, -70px) 0 0 auto;
       padding: 30px 40px 40px;
-      bottom: -250px;
+    }
+
+    &__item:nth-child(2) &__card {
+      margin-left: 0;
+      margin-right: auto;
     }
   }
 
   @include mixin.sp {
     &__item {
       margin-bottom: 60px;
-    }
-
-    &__img {
-      width: 100%;
-      margin: 0 auto;
-      border-radius: 20px;
-    }
-
-    &__card {
-      position: relative;
-      width: 100%;
-      max-width: 780px;
-      box-sizing: border-box;
-      padding: 30px 24px;
-      bottom: auto;
-      right: auto;
-      left: auto;
-      border-radius: 30px;
     }
 
     &__card-number {
