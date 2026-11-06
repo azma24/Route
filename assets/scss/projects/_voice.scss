@@ -68,6 +68,8 @@
   }
 
   @include mixin.sp {
+    margin-bottom: 130px;
+
     &__list {
       grid-template-columns: 1fr;
     }

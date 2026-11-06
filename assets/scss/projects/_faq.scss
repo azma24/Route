@@ -83,6 +83,9 @@
   }
 
   @include mixin.sp {
+    padding-top: 30px;
+    margin-bottom: 80px;
+
     &__question {
       font-size: 0.9rem;
 

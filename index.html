@@ -118,10 +118,19 @@
     <main>
       <section class="fv">
         <div class="fv__img">
-          <img
-            src="./assets/img/fv.webp"
-            alt="日本人男性と外国人女性が談笑するファーストビュー"
-          />
+          <picture>
+            <!-- SP版 -->
+            <source
+              srcset="./assets/img/fv-sp.webp"
+              media="(max-width: 480px)"
+            />
+
+            <!-- PC版 -->
+            <img
+              src="./assets/img/fv-pc.webp"
+              alt="日本人男性と外国人女性が談笑する様子"
+            />
+          </picture>
         </div>
         <div class="fv__text">
           <h1 class="fv__text-title scroll-js scroll-js--fade-up">
@@ -583,18 +592,20 @@
               <p class="course__price scroll-js scroll-js--fade-up">
                 月額<span class="course__strong-price">24,800</span>円（税込）
               </p>
-              <p class="course__text">
-                <span class="course__strong-text">LINE</span
-                >でいつでもメッセージで英語を使う練習ができる
-              </p>
-              <p class="course__text">
-                <span class="course__strong-text">週1回の会話セッション</span
-                >で実践経験を積める
-              </p>
-              <p class="course__text">
-                <span class="course__strong-text">専属Habit Coach</span
-                >が継続をサポート
-              </p>
+              <div class="course__feature">
+                <p class="course__text">
+                  <span class="course__strong-text">LINE</span
+                  >でいつでもメッセージで英語を使う練習ができる
+                </p>
+                <p class="course__text">
+                  <span class="course__strong-text">週1回の会話セッション</span
+                  >で実践経験を積める
+                </p>
+                <p class="course__text">
+                  <span class="course__strong-text">専属Habit Coach</span
+                  >が継続をサポート
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -746,9 +757,9 @@
               />大丈夫です。
             </p>
             <p class="footer-message__text">
-              英語を話せるようになるために<br class="tab-only" />完璧な英語は<br
-                class="sp-only"
-              />必要ありません。
+              英語を話せるようになるために<br
+                class="tab-only"
+              />完璧な英語は必要ありません。
               <br />
               必要なのは安心して話せる最初の一歩です。
             </p>

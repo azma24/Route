@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 38px 40px;
+    padding: 10px 35px;
     transition: padding 0.3s ease;
     background-color: #fff;
     border-bottom: 1px solid #e7e7e7;
@@ -28,7 +28,7 @@
 
   &__logo {
     img {
-      width: 220px;
+      width: 180px;
       height: auto;
       transition: width 0.3s ease;
 
@@ -100,7 +100,7 @@
   }
 
   &__nav-item {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: 1rem;
     transition: font-size 0.3s ease;
 
     @include mixin.tab {

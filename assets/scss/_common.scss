@@ -19,7 +19,7 @@
 
 .section__title-en {
   color: variables.$color-text-sub;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 
   @include mixin.tab {
     font-size: 0.9rem;
@@ -37,10 +37,10 @@
   &::after {
     content: "";
     display: block;
-    width: 740px;
+    width: 70%;
     height: 1px;
-    margin: 10px auto 0;
-    background-color: variables.$color-text;
+    margin: 15px auto 0;
+    background-color: variables.$color-secondary;
 
     @include mixin.sp {
       width: 90%;

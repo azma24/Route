@@ -12,7 +12,7 @@
 
   &__header {
     background-color: variables.$color-primary;
-    padding: 40px 0;
+    padding: 28px 0;
     border-radius: 50px 50px 0 0;
     font-size: 1.5rem;
     color: #fff;
@@ -24,7 +24,22 @@
   }
 
   &__price {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+  }
+
+  &__feature {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    text-align: left;
+
+    p {
+      &::before {
+        content: "●";
+        margin-right: 10px;
+        color: variables.$color-primary;
+      }
+    }
   }
 
   &__text {
@@ -37,7 +52,7 @@
   }
 
   &__strong-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
   }
 
