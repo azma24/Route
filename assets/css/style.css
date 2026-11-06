@@ -417,7 +417,7 @@ br.tab-only {
   z-index: -1;
 }
 .cta__message {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 30px;
 }
 @media screen and (max-width: 480px) {
@@ -437,11 +437,11 @@ br.tab-only {
 
 .cta-button {
   display: inline-block;
-  padding: 24px 48px;
+  padding: 16px 90px;
   background-color: #d79f3d;
   color: #fff;
   border-radius: 50px;
-  font-size: clamp(1rem, 2vw, 1.75rem);
+  font-size: 1.3rem;
   transition: opacity 0.2s ease;
 }
 .cta-button:hover {

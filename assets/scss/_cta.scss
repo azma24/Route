@@ -22,7 +22,7 @@
   }
 
   &__message {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 30px;
   }
 
@@ -44,11 +44,11 @@
 
 .cta-button {
   display: inline-block;
-  padding: 24px 48px;
+  padding: 16px 90px;
   background-color: variables.$color-primary;
   color: #fff;
   border-radius: 50px;
-  font-size: clamp(1rem, 2vw, 1.75rem);
+  font-size: 1.3rem;
   transition: opacity 0.2s ease;
 
   &:hover {
